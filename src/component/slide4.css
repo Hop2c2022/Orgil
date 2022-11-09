@@ -1,0 +1,52 @@
+.big {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  width: 28vw;
+  margin-left: 10vw;
+}
+.img {
+  width: 70vw;
+  height: 70vh;
+}
+.text1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 53px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.text2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  width: 29vw;
+  color: #000000;
+}
+.text3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4da0fd;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
+}
+.hooson {
+  width: 5vw;
+}

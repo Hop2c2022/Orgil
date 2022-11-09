@@ -1,0 +1,131 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+.menu-text {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 550;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  margin-right: 7vw;
+  margin-left: 7vw;
+}
+.team {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 38px;
+}
+.slide1 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-size: cover;
+  background-image: url("../../public/img/woman.jpg");
+}
+.content-top-one {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 750;
+  display: flex;
+  align-items: center;
+  font-size: 66px;
+  line-height: 80px;
+  height: auto;
+  color: white;
+  width: 34vw;
+  height: 2vh;
+}
+.team-father {
+  color: #0bbef2;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.tseg {
+  background-color: #0bbef2;
+  margin-top: 20px;
+  width: 10px;
+  height: 10px;
+}
+.content-top-two {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  line-height: 40px;
+  align-items: center;
+  width: 26vw;
+  height: 2vh;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10vh;
+  margin-right: 7vw;
+  margin-left: 7vw;
+  margin-bottom: 270px;
+}
+.content-top {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  width: 50vw;
+}
+.button {
+  color: white;
+  background-color: #0bbef2;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 550;
+  width: 9vw;
+  border-radius: 3.5px;
+  height: 6vh;
+}
+.input {
+  width: 20vw;
+  height: 6vh;
+  border-radius: 1px;
+  border: 0.5px solid gainsboro;
+  color: #6d7d8b;
+  font-weight: 500;
+  font-size: 20px;
+}
+.content-down {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.big {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+.slide2 {
+  display: flex;
+  flex-direction: row;
+}
+.slide2-texts {
+  display: flex;
+  flex-direction: column;
+}
