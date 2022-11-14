@@ -1,0 +1,81 @@
+.card-text1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  color: #25313c;
+}
+.card-text2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  display: flex;
+  align-items: flex-end;
+  color: #25313c;
+}
+.card-texts {
+  margin-top: 3vh;
+  width: 16vw;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-items: center;
+}
+.card {
+  background-color: white;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  border-radius: 10px;
+}
+.card-text3 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3vh;
+  margin-right: 2vw;
+  gap: 10px;
+}
+.card-img {
+  width: 20vw;
+}
+.card-text3-img {
+  width: 3vw;
+  height: 4vh;
+}
+.card-text3-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150.6%;
+  display: flex;
+  align-items: center;
+  color: #6d7d8b;
+  width: 4vw;
+}
+.card-text3-on {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150.6%;
+  display: flex;
+  width: 7vw;
+  align-items: center;
+  color: #6d7d8b;
+}
+.card-text3-zuras {
+  display: flex;
+  font-size: 9px;
+  align-items: center;
+  color: #6d7d8b;
+}

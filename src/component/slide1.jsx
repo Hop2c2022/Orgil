@@ -6,15 +6,15 @@ export const Slide1 = () => {
     <div className="slide1">
       <div className="header">
         <div className="team-father">
-          <div className="team">team</div>
-          <div className="tseg"></div>
+          <div className="bag">team</div>
+          <div className="tsegSlide1"></div>
         </div>
-        <div className="menu">
-          <div className="menu-text">Products</div>
-          <div className="menu-text">Services</div>
-          <div className="menu-text">Contact</div>
+        <div className="tses">
+          <div className="tses-text">Products</div>
+          <div className="tses-text">Services</div>
+          <div className="tses-text">Contact</div>
           <Link to={"/login"}>
-            <div className="menu-text">Log in</div>
+            <div className="tses-text">Log in</div>
           </Link>
         </div>
       </div>
@@ -30,7 +30,7 @@ export const Slide1 = () => {
         </div>
         <div className="content-down">
           <input placeholder="    Email" className="input" />
-          <button className="button">Get early access</button>
+          <button className="btn">Get early access</button>
         </div>
       </div>
     </div>

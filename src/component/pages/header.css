@@ -1,0 +1,52 @@
+.father {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.menus {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+}
+.button {
+  width: 128px;
+  height: 56px;
+  color: #4da0fd;
+  border: 2px solid #4da0fd;
+  background-color: rgba(77, 160, 253, 0.1);
+}
+.menu {
+  width: 77px;
+  height: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #6d7d8b;
+}
+.team {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #1e2742;
+}
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tseg {
+  background-color: #1e2742;
+  width: 10px;
+  height: 10px;
+}

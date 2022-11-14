@@ -1,12 +1,12 @@
-.menu {
+.tses {
   display: flex;
   flex-direction: row;
   gap: 2vw;
 }
-.menu-text {
+.tses-text {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 550;
 }
 .header {
@@ -17,7 +17,7 @@
   margin-right: 7vw;
   margin-left: 7vw;
 }
-.team {
+.bag {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -55,7 +55,7 @@
   justify-content: center;
   align-items: center;
 }
-.tseg {
+.tsegSlide1 {
   background-color: #0bbef2;
   margin-top: 20px;
   width: 10px;
@@ -89,7 +89,7 @@
   gap: 120px;
   width: 50vw;
 }
-.button {
+.btn {
   color: white;
   background-color: #0bbef2;
   border: none;
