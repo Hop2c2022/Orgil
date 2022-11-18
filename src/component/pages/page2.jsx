@@ -2,11 +2,10 @@ import React from "react";
 import "./page2.css";
 import { Header } from "./header";
 import { Cards } from "./cards";
-export const Page2 = () => {
+import { Footer } from "./footer";
+export const Blog = () => {
   return (
     <div className="page2-back">
-      <br />
-      <br />
       <Header />
       <div className="page2-big">
         {" "}
@@ -27,6 +26,15 @@ export const Page2 = () => {
           <Cards />
         </div>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <Footer />
     </div>
   );
 };

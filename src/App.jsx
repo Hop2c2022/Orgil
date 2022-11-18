@@ -3,7 +3,9 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./component/Home";
 import { Login } from "./component/Login";
-import { Page2 } from "./component/pages/page2";
+import { Blog, Page2 } from "./component/pages/page2";
+import { Info } from "./component/pages/Info";
+
 // import { Header } from "./component/pages/header";
 import { Page1 } from "./component/pages/page1";
 const App = () => {
@@ -15,7 +17,8 @@ const App = () => {
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/page1" element={<Page1 />}></Route>
-          <Route path="/page2" element={<Page2 />}></Route>
+          <Route path="/blog" element={<Blog />}></Route>
+          <Route path="/info" element={<Info />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

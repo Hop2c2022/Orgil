@@ -1,0 +1,24 @@
+.infoFather {
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  gap: 3vw;
+  border: 1px solid black;
+}
+.infoRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.infoAav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+.infoimg {
+  width: 10vw;
+}
