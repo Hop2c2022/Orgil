@@ -1,0 +1,29 @@
+.slide5Card {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  height: 41vh;
+  background-color: aqua;
+  align-items: center;
+}
+
+.slide5Star {
+  background-image: url("../../../public/img/Stars.svg");
+  width: 120px;
+  height: 20px;
+}
+.slide5header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 18vw;
+  justify-content: center;
+}
+.slide5Footer {
+  display: flex;
+}
+.slide5Img {
+  background-image: url("../../../public/img/slide5Img.svg");
+  width: 57px;
+  height: 56px;
+}

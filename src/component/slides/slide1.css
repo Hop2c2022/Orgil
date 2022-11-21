@@ -32,7 +32,7 @@
   flex-direction: column;
   justify-content: space-around;
   background-size: cover;
-  background-image: url("../../public/img/woman.jpg");
+  background-image: url("../../../public/img/woman.jpg");
 }
 .content-top-one {
   font-family: Arial, Helvetica, sans-serif;
