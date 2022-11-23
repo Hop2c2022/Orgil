@@ -26,3 +26,8 @@
   align-items: center;
   color: #000000;
 }
+.slide5cards {
+  gap: 3vw;
+  margin-top: 13vh;
+  display: flex;
+}
