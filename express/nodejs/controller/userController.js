@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
+const User = require("../database/model/users");
 
-exports.userPostController = (req, res) => {};
+// exports.userPostController = (req, res) => {};
+
 exports.userPostController = async (req, res) => {
   try {
     const { username, password, email, gender } = req.body;
@@ -12,7 +14,7 @@ exports.userPostController = async (req, res) => {
     }).save();
   } catch (err) {
     console.log(err.message);
-    return err.message;
+    res.send(err.message);
   }
 };
 
