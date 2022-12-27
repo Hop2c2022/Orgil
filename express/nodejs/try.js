@@ -5,6 +5,7 @@ const UserRouter = require("./router/userRoute");
 const port = 8000;
 const app = express();
 app.use(express.json());
+
 app.use(UserRouter);
 
 const startServer = async () => {

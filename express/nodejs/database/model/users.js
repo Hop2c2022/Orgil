@@ -10,3 +10,32 @@ const User = new mongoose.Schema({
 
 const UserModel = mongoose.model("User", User);
 module.exports = UserModel;
+
+// [
+//   {
+//     _id: 123,
+//     name: "jvk"
+//   }
+// ]
+
+// [
+//   {
+//     _id: "post123",
+//     posts: "hi",
+//     userId: 123
+//   }
+// ]
+
+// [
+//   {
+//     _id: "comment123",
+//     comment: "ohh hi hi",
+//     postId: "post123",
+//     userId: 123
+//   }
+// ]
+
+// "hi" --> "jvk" -->
+// "ohh hi hi" --> "jvk"
+
+// "hiasjdhaikseaw" --> "jvk"
