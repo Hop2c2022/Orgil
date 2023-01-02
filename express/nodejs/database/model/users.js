@@ -1,41 +1,20 @@
 const mongoose = require(`mongoose`);
 
 const User = new mongoose.Schema({
-  username: { type: String, required: true },
+  username: {
+    type: String,
+    required: [true, "Username is required"],
+    minlength: [8, "Username lenght must be at least 8 characters"],
+    maxlength: [20, "Username lenght must be 8 to 20 characters"],
+  },
   password: { type: String, required: true },
   email: { type: String, required: true },
-  gender: { type: String, required: true },
+  gender: {
+    type: String,
+    // enum: { values: ["male, female"], message: "{value} is not supported" },
+  },
   createdAt: { type: Date, default: Date.now() },
 });
 
 const UserModel = mongoose.model("User", User);
 module.exports = UserModel;
-
-// [
-//   {
-//     _id: 123,
-//     name: "jvk"
-//   }
-// ]
-
-// [
-//   {
-//     _id: "post123",
-//     posts: "hi",
-//     userId: 123
-//   }
-// ]
-
-// [
-//   {
-//     _id: "comment123",
-//     comment: "ohh hi hi",
-//     postId: "post123",
-//     userId: 123
-//   }
-// ]
-
-// "hi" --> "jvk" -->
-// "ohh hi hi" --> "jvk"
-
-// "hiasjdhaikseaw" --> "jvk"

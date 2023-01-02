@@ -1,16 +1,14 @@
 const mongoose = require("mongoose");
-const PostModel = require("../database/model/post");
+const {
+  createUserQuery,
+  deleteUserQuery,
+  updateUsernameQuery,
+} = require("../query/userQuery");
 const User = require("../database/model/users");
 
-exports.userPostController = async (req, res) => {
+exports.userCreate = async (req, res) => {
   try {
-    const { username, password, email, gender } = req.body;
-    const result = await new User({
-      username: username,
-      password: password,
-      email: email,
-      gender: gender,
-    }).save();
+    await createUserQuery(req);
     res.send("success");
   } catch (err) {
     console.log(err.message);
@@ -18,44 +16,23 @@ exports.userPostController = async (req, res) => {
   }
 };
 
-exports.userDeleteController = async (req, res) => {
+exports.userDelete = async (req, res) => {
   try {
-    const { id } = req.params;
-    const objId = new mongoose.Types.ObjectId(id);
-    const result = await User.findByIdAndDelete({ _id: objId }, { new: true });
+    await deleteUserQuery(req);
     res.send(`Success, ${result.username} deleted `);
   } catch (err) {
     res.send(err.message);
   }
 };
-exports.userUpdateController = async (req, res) => {
+exports.userUpdate = async (req, res) => {
   try {
-    const { id } = req.params;
-    const { username } = req.body;
-    const objId = new mongoose.Types.ObjectId(id);
-    const resultLast = await User.findById({ _id: objId });
-    const result = await User.findOneAndUpdate(
-      { _id: objId },
-      { username: username },
-      { new: true }
-    );
+    await updateUsernameQuery(req);
     res.send(`Success , ${resultLast.username} ni ${result.username} soligdov`);
   } catch (err) {
     res.send(err.message);
   }
 };
-exports.postPostController = async (req, res) => {
-  try {
-    const { postValue } = req.body;
-    const result = new Post({
-      postValue: postValue,
-      uid: req.params.uid,
-    }).save();
-    res.send("success posted");
-  } catch (err) {
-    res.send(err.message);
-  }
-};
+
 // exports.userUpdateController = async (req, res) => {
 //   try {
 //     const { id } = req.params;
