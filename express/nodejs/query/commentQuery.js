@@ -1,11 +1,16 @@
+const Comment = require("../database/model/comment");
+
 exports.createCommentQuery = async (req) => {
-  const { comments } = req.body;
-  const { id } = req.params;
-  console.log("cL ", id);
   const result = await new Comment({
-    comments: comments,
-    ComId: req.body.ComId,
+    comment: req.body.comment,
+    postId: req.body.postId,
     userId: req.body.userId,
   }).save();
+  return result;
+};
+
+exports.deleteCommentQuery = async (req) => {
+  const { id } = req.params;
+  const result = await Comment.findByIdAndDelete({ _id: objId }, { new: true });
   return result;
 };

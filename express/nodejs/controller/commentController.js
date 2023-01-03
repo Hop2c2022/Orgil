@@ -1,18 +1,23 @@
 const mongoose = require("mongoose");
-const Comment = require("../database/model/comment");
+const {
+  createCommentQuery,
+  deleteCommentQuery,
+} = require("../query/commentQuery");
 
 exports.commentCreate = async (req, res) => {
   try {
-    const { comments } = req.body;
-    const { id } = req.params;
-    const result = await new Comment({
-      comments: comments,
-      postId: req.body.postId,
-      userId: req.body.userId,
-    }).save();
-    res.send(`succes`);
+    await createCommentQuery(req);
+    res.send(`Success comment created`);
   } catch (err) {
-    res.send(err.message + "adadada");
-    console.log(err.message, "aa");
+    res.send(err.message);
+    console.log("aaasdasdaa");
+  }
+};
+exports.commentDelete = async (req, res) => {
+  try {
+    await deleteCommentQuery(res);
+    res.send(`Success comment deleted`);
+  } catch (err) {
+    console.log(err);
   }
 };

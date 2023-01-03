@@ -9,9 +9,15 @@ exports.postCreateQuery = async (req) => {
   }).save();
   return result;
 };
-exports.deletePostQuery = async (req) => {
+exports.postDeleteQuery = async (req) => {
   const { id } = req.params;
-  const objId = new mongoose.Types.ObjectId(id);
-  const result = await User.findByIdAndDelete({ _id: objId }, { new: true });
+  const result = await Post.findByIdAndDelete({ _id: objId }, { new: true });
   return result;
+};
+
+exports.postUpdateQuery = async (req, res) => {
+  const { id } = req.params;
+  const { change, value } = req.body;
+  const a = await Post.findByIdAndUpdate({ _id: id }, { [change]: value });
+  return a;
 };

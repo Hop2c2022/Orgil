@@ -15,6 +15,7 @@ exports.deleteUserQuery = async (req) => {
   const { id } = req.params;
   const objId = new mongoose.Types.ObjectId(id);
   const result = await User.findByIdAndDelete({ _id: objId }, { new: true });
+  console.log(result);
   return result;
 };
 
