@@ -1,0 +1,9 @@
+#holboos {
+  display: flex;
+  flex-direction: column;
+}
+#shortenedbody {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
