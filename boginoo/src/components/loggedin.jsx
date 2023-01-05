@@ -1,11 +1,12 @@
 import React from "react";
-import "./home.css";
-import { Header } from "./header";
-
-export const Home = () => {
+import "./loggedin.css";
+export const Loggedin = () => {
   return (
     <div className="homeBig">
-      <Header />
+      <div className="loginHeader">
+        <div className="loginHerhen">Хэрхэн ажилладаг вэ?</div>
+        <div className="LogginName">Dulguun</div>
+      </div>
       <div className="homeBody">
         <div className="homeLogo">
           <img className="boginoLogo" src="img/boginoLogo.svg" />

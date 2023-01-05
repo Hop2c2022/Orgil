@@ -16,15 +16,17 @@ export const Shortened = () => {
           />
           <button className="homeHeaderButton1">Богиносгох</button>
         </div>
-        <div id="Holboos">
-          <div id="ugugdsun">Өгөгдсөн холбоос:</div>
-          <div id="zam">https://www.web-huudas.mn</div>
-        </div>
-        <div id="Holboos">
-          <div id="ugugdsun">Богино холбоос:</div>
-          <div id="shortenedbody">
-            <div id="shortenedbodytext1">shortly.io/wbmn12</div>
-            <div id="shortenedbodytext2">Хуулж авах</div>
+        <div id="holboosBig">
+          <div id="holboos">
+            <div id="ugugdsun">Өгөгдсөн холбоос:</div>
+            <div id="zam">https://www.web-huudas.mn</div>
+          </div>
+          <div id="holboos">
+            <div id="ugugdsun">Богино холбоос:</div>
+            <div id="shortenedbody">
+              <div id="shortenedbodytext1">shortly.io/wbmn12</div>
+              <div id="shortenedbodytext2">Хуулж авах</div>
+            </div>
           </div>
         </div>
       </div>

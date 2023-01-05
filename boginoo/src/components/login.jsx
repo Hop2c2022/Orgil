@@ -1,5 +1,6 @@
 import React from "react";
 import "./one.css";
+import { Link } from "react-router-dom";
 export const Login = () => {
   return (
     <div className="loginBig">
@@ -33,12 +34,19 @@ export const Login = () => {
                 Намайг сана
               </label>
             </div>
-            <div className="nmgSana4">Нууц үгээ мартсан</div>
+            <Link to={"/forgotpass"}>
+              <div className="nmgSana4">Нууц үгээ мартсан</div>
+            </Link>
           </div>
         </div>
         <div className="loginBodyText3">
           <button className="loginBtn">Нэвтрэх</button>
-          <div className="loginText3Text">Шинэ хэрэглэгч бол энд дарна уу?</div>
+          <Link to={"/signup"}>
+            {" "}
+            <div className="loginText3Text">
+              Шинэ хэрэглэгч бол энд дарна уу?
+            </div>
+          </Link>
         </div>
       </div>
       <div className="loginFooter">

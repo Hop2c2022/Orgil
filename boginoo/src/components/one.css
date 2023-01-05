@@ -30,7 +30,8 @@
 }
 .loginHeader {
   display: flex;
-  flex-direction: column;
+  gap: 1vw;
+  flex-direction: row;
   justify-content: flex-end;
   position: absolute;
   margin-left: 70vw;

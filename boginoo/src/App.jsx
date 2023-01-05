@@ -7,6 +7,8 @@ import { ForgotPass } from "./components/forgotpass";
 import { HomeIntial } from "./components/home-intial";
 import { Shortened } from "./components/shortened";
 import { Header } from "./components/header";
+import { Loggedin } from "./components/loggedin";
+import { History } from "./components/history";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
           <Route path="/homeintial" element={<HomeIntial />}></Route>
           <Route path="/shortened" element={<Shortened />}></Route>
           <Route path="/header" element={<Header />}></Route>
+          <Route path="/loggedin" element={<Loggedin />}></Route>
+          <Route path="/history" element={<History />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,11 +1,9 @@
 import React from "react";
+import { Header } from "./header";
 export const HomeIntial = () => {
   return (
     <div className="homeBig">
-      <div className="homeHeader">
-        <div className="homeHeadertext1">Хэрхэн ажилладаж вэ?</div>
-        <button className="homeHeaderButton1">Нэвтрэх</button>
-      </div>
+      <Header />
       <div className="homeBody">
         <div className="homeLogo">
           <img className="boginoLogo" src="img/boginoLogo3.svg" />

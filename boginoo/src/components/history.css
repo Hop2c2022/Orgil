@@ -1,4 +1,30 @@
-#holboos {
+#Historys {
+  display: flex;
+  flex-direction: column;
+}
+#Historyone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2vw;
+  width: 789px;
+}
+#tuuhHadgalah {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+#Tuuh {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+  display: flex;
+  text-align: flex-start;
+  color: #02b589;
+}
+#Holboos {
   display: flex;
   flex-direction: column;
   gap: 1vh;
@@ -26,7 +52,9 @@
   line-height: 23px;
   color: #000000;
 }
-
+#tuuhHadgalah {
+  width: 770px;
+}
 #shortenedbody {
   display: flex;
   flex-direction: row;
@@ -54,4 +82,20 @@
   gap: 4vh;
   width: 700px;
   align-items: flex-start;
+}
+#HistoryOne {
+  display: flex;
+  flex-direction: row;
+  gap: 7vw;
+}
+#zuraas {
+  width: 780px;
+
+  border: 1px solid #e2e2e2;
+}
+#withZuraas {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  margin-top: 3vh;
 }
