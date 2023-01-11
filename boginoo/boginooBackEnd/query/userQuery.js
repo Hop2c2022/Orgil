@@ -1,3 +1,4 @@
+const { default: mongoose } = require("mongoose");
 const User = require("../database/model/users");
 
 exports.signUp = async (req) => {

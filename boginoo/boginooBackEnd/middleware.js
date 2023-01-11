@@ -1,7 +1,7 @@
 const { TokenChecker } = require("./helper/helper");
 
 exports.TokenCheckerMiddleware = async (req, res, next) => {
-  const token = req?.headers?.authorization.split;
+  const token = req?.headers?.authorization;
 
   if (!token) {
     res.status(401).send({ message: "No Token provided!" });
