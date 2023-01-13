@@ -1,0 +1,57 @@
+#holboos {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: 700px;
+}
+#shortenedbody {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+#ugugdsun {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  opacity: 0.5;
+}
+#zam {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+
+#shortenedbody {
+  display: flex;
+  flex-direction: row;
+}
+#shortenedbodytext2 {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration-line: underline;
+  color: #02b589;
+}
+#shortenedbodytext1 {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+#holboosBig {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  width: 700px;
+  align-items: flex-start;
+}
