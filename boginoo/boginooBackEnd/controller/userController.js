@@ -27,9 +27,11 @@ exports.signUp = async (req, res) => {
     await signUp(req);
     res.send(`success user created`);
   } catch (err) {
+    console.log(err.message);
     res.send(err.message);
   }
 };
+
 exports.userLogin = async (req, res) => {
   const { password, email } = req.body;
   const user = await User.findOne({ email: email });
