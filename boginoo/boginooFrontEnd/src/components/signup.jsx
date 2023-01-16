@@ -3,35 +3,27 @@ import "./one.css";
 import { useState } from "react";
 import axios from "axios";
 export const Signup = () => {
-  let RealPass;
+  let a;
   const [password, setPassword] = useState("");
   const [password1, setPassword1] = useState("");
   const [mail, setMail] = useState("");
   const InputListener = (event) => {
     setPassword(event.target.value);
   };
-
   const InputListener1 = (event) => {
     setPassword1(event.target.value);
   };
-  if (password === password1) {
-    RealPass = password;
-    return RealPass;
-  } else {
-    const a = "nuuts ugee davtana uu";
-    console.log(a);
-  }
-
   const MailListener = (event) => {
     setMail(event.target.value);
   };
-  const submit = async () => {
+  console.log(mail);
+  const Submit = async () => {
     await axios({
       method: "post",
-      url: "mongodb+srv://orgil:94566399ub@cluster0.ppbsxka.mongodb.net/boginoo",
-      body: {
+      url: "http://localhost:8000/user",
+      data: {
         email: mail,
-        password: RealPass,
+        password: password,
       },
     });
   };
@@ -70,7 +62,7 @@ export const Signup = () => {
           />
         </div>
         <div className="loginBodyText3">
-          <button className="loginBtn" onClick={submit}>
+          <button className="loginBtn" onClick={Submit}>
             Бүртгүүлэх
           </button>
         </div>

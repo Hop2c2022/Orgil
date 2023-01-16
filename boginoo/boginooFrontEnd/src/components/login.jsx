@@ -1,18 +1,10 @@
 import React, { useState } from "react";
 import "./one.css";
 import { Link } from "react-router-dom";
+import { use } from "../../../boginooBackEnd/router/userRoute";
 export const Login = () => {
-  // const [email, setEmail] = useState("")
-  // const [password, setPassword] = useState("")
-
-  // const submit = () => {
-  //   axios.get("http://localhost:8000/users",
-  //   variables: {
-  //     email: email
-  //     password: password
-  //   })
-  // })
-
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
   return (
     <div className="loginBig">
       <div className="loginHeader">
@@ -25,12 +17,24 @@ export const Login = () => {
         <div className="nevtreh">Нэвтрэх</div>
         <div className="loginBodyText1">
           <div className="loginTextLog">Цахим хаяг</div>
-          <input className="loginBodyInp" placeholder="name@mail.domain" />
+          <input
+            className="loginBodyInp"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            placeholder="name@mail.domain"
+          />
         </div>
         <div className="loginBodyText2">
           <div className="loginText">
             <div className="loginTextLog">Нууц үг</div>
-            <input className="loginBodyInp" placeholder="************" />
+            <input
+              className="loginBodyInp"
+              onChange={(e) => {
+                setPass(e.target.value);
+              }}
+              placeholder="************"
+            />
           </div>
           <div className="loginNuutsUg">
             <div className="nmgSana1">
