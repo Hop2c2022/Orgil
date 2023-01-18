@@ -1,10 +1,27 @@
 import React, { useState } from "react";
 import "./one.css";
 import { Link } from "react-router-dom";
-import { use } from "../../../boginooBackEnd/router/userRoute";
+import axios from "axios";
+
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const Nevtreh = async () => {
+    await fetch({
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      url: "http://localhost:8000/users",
+      body: JSON.stringify({
+        email: email,
+        password: pass,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
+
   return (
     <div className="loginBig">
       <div className="loginHeader">
@@ -55,9 +72,10 @@ export const Login = () => {
           </div>
         </div>
         <div className="loginBodyText3">
-          <button className="loginBtn">Нэвтрэх</button>
+          <button className="loginBtn" onClick={Nevtreh}>
+            Нэвтрэх
+          </button>
           <Link to={"/signup"}>
-            {" "}
             <div className="loginText3Text">
               Шинэ хэрэглэгч бол энд дарна уу?
             </div>

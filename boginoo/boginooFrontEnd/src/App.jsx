@@ -10,8 +10,12 @@ import { Header } from "./components/header";
 import { Loggedin } from "./components/loggedin";
 import { History } from "./components/history";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    fetch("http://localhost:8000").then((res) => res.json());
+  });
   return (
     <div>
       <BrowserRouter>
