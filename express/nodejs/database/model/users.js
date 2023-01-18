@@ -14,6 +14,7 @@ const User = new mongoose.Schema({
     // enum: { values: ["male, female"], message: "{value} is not supported" },
   },
   createdAt: { type: Date, default: Date.now() },
+  admin: { type: Boolean, default: false },
 });
 
 const UserModel = mongoose.model("User", User);

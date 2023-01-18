@@ -3,6 +3,7 @@ const {
   userCreate,
   userUpdate,
   userDelete,
+  users,
 } = require("../controller/userController");
 const {
   postCreate,
@@ -13,8 +14,10 @@ const {
   commentCreate,
   commentDelete,
 } = require("../controller/commentController");
+const { authorizer } = require("../autorizer/autorzation");
 const UserRouter = express.Router();
 UserRouter.post("/users", userCreate);
+UserRouter.get("/users", users);
 UserRouter.delete("/user/:id", userDelete);
 UserRouter.put("/user/:id", userUpdate);
 UserRouter.post("/user/:id/post", postCreate);

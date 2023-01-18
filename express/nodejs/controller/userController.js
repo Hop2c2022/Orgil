@@ -15,6 +15,17 @@ exports.userCreate = async (req, res) => {
     res.send(err.message);
   }
 };
+exports.users = async (req, res) => {
+  try {
+    const { limit, page } = req.query;
+    const result = await User.find()
+      .skip((page - 1) * limit)
+      .limit(10);
+    res.send({ data: result });
+  } catch (err) {
+    res.send(err.message);
+  }
+};
 
 exports.userDelete = async (req, res) => {
   try {
