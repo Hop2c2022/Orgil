@@ -6,20 +6,21 @@ import axios from "axios";
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+
   const Nevtreh = async () => {
-    await fetch({
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      url: "http://localhost:8000/users",
-      body: JSON.stringify({
-        email: email,
-        password: pass,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+    (
+      await axios({
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        url: "http://localhost:8000/users",
+        data: {
+          email: email,
+          password: pass,
+        },
+      })
+    ).data == true
+      ? window.location.replace("/")
+      : console.log("failed");
   };
 
   return (

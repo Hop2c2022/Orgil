@@ -1,5 +1,7 @@
+import axios from "axios";
 import React from "react";
 import { Header } from "./header";
+import axios from "axios";
 export const HomeIntial = () => {
   return (
     <div className="homeBig">
