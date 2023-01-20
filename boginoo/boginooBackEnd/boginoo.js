@@ -8,6 +8,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(UserRouter);
+app.get("/", (req, res) => {
+  res.json({ msg: "cors is running" });
+});
 
 const startServer = async () => {
   await connectDatabase();

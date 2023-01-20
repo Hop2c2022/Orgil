@@ -31,6 +31,19 @@ exports.signUp = async (req, res) => {
     res.send(err.message);
   }
 };
+exports.userLog = async (req, res) => {
+  try {
+    const { password, email } = await req.body;
+    const user = await User.findOne({ email: email });
+    if (!user) {
+      res.send("user bhgy");
+    } else if (user.password === password && user.email === email) {
+      res.send(true);
+    }
+  } catch (err) {
+    res.send(err.message);
+  }
+};
 
 exports.userLogin = async (req, res) => {
   const { password, email } = req.body;
