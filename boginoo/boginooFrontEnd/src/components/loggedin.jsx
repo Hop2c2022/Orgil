@@ -5,7 +5,7 @@ export const Loggedin = () => {
     <div className="homeBig">
       <div className="loginHeader">
         <div className="loginHerhen">Хэрхэн ажилладаг вэ?</div>
-        <div className="LogginName">Dulguun</div>
+        <div className="LogginName">{}</div>
       </div>
       <div className="homeBody">
         <div className="homeLogo">

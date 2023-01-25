@@ -2,25 +2,29 @@ import React, { useState } from "react";
 import "./one.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { AuthContext, useAuthContext } from "../common/AuthProvider";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const { isAuthenticated, userId } = useAuthContext();
 
   const Nevtreh = async () => {
-    (
-      await axios({
-        method: "post",
-        headers: { "Content-Type": "application/json" },
-        url: "http://localhost:8000/users",
-        data: {
-          email: email,
-          password: pass,
-        },
-      })
-    ).data == true
-      ? window.location.replace("/")
-      : console.log("failed");
+    const result = await axios({
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      url: "http://localhost:8000/login",
+      data: {
+        email: email,
+        password: pass,
+      },
+    });
+    if (result?.data?.token) {
+      localStorage.setItem("token", result.data.token);
+    }
+    if (isAuthenticated) {
+      window.location = "/loggedin";
+    }
   };
 
   return (

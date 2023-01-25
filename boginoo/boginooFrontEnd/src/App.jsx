@@ -10,27 +10,26 @@ import { Header } from "./components/header";
 import { Loggedin } from "./components/loggedin";
 import { History } from "./components/history";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
+import { AuthProvider } from "./common/AuthProvider";
 
 function App() {
-  useEffect(() => {
-    fetch("http://localhost:8000").then((res) => res.json());
-  });
   return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/signup" element={<Signup />}></Route>
-          <Route path="/forgotpass" element={<ForgotPass />}></Route>
-          <Route path="/homeintial" element={<HomeIntial />}></Route>
-          <Route path="/shortened" element={<Shortened />}></Route>
-          <Route path="/header" element={<Header />}></Route>
-          <Route path="/loggedin" element={<Loggedin />}></Route>
-          <Route path="/history" element={<History />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/signup" element={<Signup />}></Route>
+            <Route path="/forgotpass" element={<ForgotPass />}></Route>
+            <Route path="/homeintial" element={<HomeIntial />}></Route>
+            <Route path="/shortened" element={<Shortened />}></Route>
+            <Route path="/header" element={<Header />}></Route>
+            <Route path="/loggedin" element={<Loggedin />}></Route>
+            <Route path="/history" element={<History />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
