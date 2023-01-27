@@ -6,19 +6,22 @@ import { AuthContext, useAuthContext } from "../common/AuthProvider";
 
 export const HomeIntial = () => {
   const [LongUrl, setLongUrl] = useState("");
+  const [shortUrl, setShorturl] = useState("");
   const { isAuthenticated, userId } = useAuthContext();
   const UrlListener = (event) => {
-    setLongUrl(event.target.event);
+    setLongUrl(event.target.value);
   };
   const urlAvah = async () => {
-    await axios({
+    const result = await axios({
       method: "post",
       url: "http://localhost:8000/url",
       data: {
         url: LongUrl,
       },
     });
+    setShorturl(result.data);
   };
+
   return (
     <div className="homeBig">
       <Header />

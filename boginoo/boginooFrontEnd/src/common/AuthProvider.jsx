@@ -10,13 +10,10 @@ export const AuthProvider = ({ children }) => {
   const [userId, setUserId] = useState("");
   useEffect(() => {
     const token = localStorage.getItem("token");
-    const uid = localStorage.getItem("uid");
     if (token) {
       setAuthenticated(true);
-      setUserId(uid);
     }
   }, []);
-
   return (
     <AuthContext.Provider
       value={{ isAuthenticated: isAuthenticated, userId: userId }}

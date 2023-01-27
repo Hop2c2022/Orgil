@@ -21,6 +21,8 @@ export const Login = () => {
     });
     if (result?.data?.token) {
       localStorage.setItem("token", result.data.token);
+      const userData = JSON.stringify(result.data.userData);
+      localStorage.setItem("userData", userData);
     }
     if (isAuthenticated) {
       window.location = "/loggedin";

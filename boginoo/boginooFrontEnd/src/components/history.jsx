@@ -1,18 +1,16 @@
 import { getValue } from "@testing-library/user-event/dist/utils";
+import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import "./history.css";
 export const History = () => {
-  const [Url, setUrl] = useState("");
-  const Sonsogch = (event) => {
-    const result = event.target.Value;
-    return result;
-  };
+  const a = localStorage.getItem("userData");
+  const newA = JSON.parse(a);
   return (
     <div className="homeBig">
       <div className="loginHeader">
         <div className="loginHerhen">Хэрхэн ажилладаг вэ?</div>
-        <div className="LogginName">Dulguun</div>
+        <div className="LogginName">{newA.email}</div>
       </div>
       <div className="homeBody">
         <div className="homeLogo">
@@ -21,7 +19,6 @@ export const History = () => {
         <div className="homeBodytexts">
           <input
             className="homeBodyInp"
-            onChange={Sonsogch}
             placeholder="https://www.web-huudas.mn"
           />
           <button className="homeHeaderButton1">Богиносгох</button>
