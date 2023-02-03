@@ -2,10 +2,9 @@ import React from "react";
 import "./one.css";
 import { useState } from "react";
 import axios from "axios";
-import { Form, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Signup = () => {
-  let a;
   const [password, setPassword] = useState("");
   const [password1, setPassword1] = useState("");
   const [mail, setMail] = useState("");
@@ -21,7 +20,7 @@ export const Signup = () => {
   };
   console.log(mail);
   const Submit = async () => {
-    if (password == password1) {
+    if (password === password1) {
       await axios({
         method: "post",
         url: "http://localhost:8000/user",

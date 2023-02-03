@@ -4,8 +4,21 @@ import React from "react";
 import { useState } from "react";
 import "./history.css";
 export const History = () => {
+  const [urls, setUrls] = useState();
   const a = localStorage.getItem("userData");
   const newA = JSON.parse(a);
+  (async () => {
+    const result = await axios({
+      method: "get",
+      url: `http://localhost:8000/url/${newA.uid}`,
+      headers: { "Content-Type": "application/json" },
+    });
+    setUrls(result.data);
+  })();
+
+  const HuulahAvah = (urls) => {
+    navigator.clipboard.writeText("http://localhost:8000/" + urls.url);
+  };
   return (
     <div className="homeBig">
       <div className="loginHeader">
@@ -26,22 +39,35 @@ export const History = () => {
         <div id="tuuhHadgalah">
           <div id="Tuuh">Түүх</div>
           <div id="Historys">
-            <div id="withZuraas">
-              <div id="HistoryOne">
-                <div id="Holboos">
-                  <div id="ugugdsun">Өгөгдсөн холбоос:</div>
-                  <div id="zam">https://www.web-huudas.mn</div>
-                </div>
-                <div id="Holboos">
-                  <div id="ugugdsun">Богино холбоос:</div>
-                  <div id="shortenedbody">
-                    <div id="shortenedbodytext1">shortly.io/wbmn12</div>
-                    <div id="shortenedbodytext2">Хуулж авах</div>
-                  </div>
-                </div>
-              </div>
-              <div id="zuraas"></div>
-            </div>
+            {urls
+              ? urls.map((el, ind) => {
+                  return (
+                    <div id="withZuraas">
+                      <div id="HistoryOne">
+                        <div id="Holboos">
+                          <div id="ugugdsun">Өгөгдсөн холбоос:</div>
+                          <div id="zam">{el.url}</div>
+                        </div>
+                        <div id="Holboos">
+                          <div id="ugugdsun">Богино холбоос:</div>
+                          <div id="shortenedbody">
+                            <div id="shortenedbodytext1">
+                              {"http://localhost:8000/" + el.shortid}
+                            </div>
+                            <button
+                              id="shortenedbodytext2"
+                              // onClick={HuulahAvah}
+                            >
+                              Хуулж авах
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="zuraas"></div>
+                    </div>
+                  );
+                })
+              : "loading"}
           </div>
         </div>
       </div>

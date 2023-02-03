@@ -7,5 +7,73 @@
   text-align: right;
   color: #000000;
 }
-.LoggedinHistory {
+.loggedinLink {
+  display: flex;
+  flex-direction: row;
+  width: 60vw;
+  align-items: center;
+  justify-content: center;
+  gap: 20vw;
+}
+.loggedinLong {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.loggedinShort {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.loggedinShortUrl {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+.loggedinUgugdsun {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  opacity: 0.5;
+}
+.loggedinBogino {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.loggedinLongUrl {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+.loggedinUrlAguulah {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+.huuljAvah {
+  border: none;
+  background-color: white;
+  color: #02b589;
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration-line: underline;
+  color: #02b589;
 }
