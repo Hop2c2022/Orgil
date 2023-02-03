@@ -52,7 +52,13 @@ exports.userLogin = async (req, res) => {
     res.send(" You don't have any user account, please sign up ");
   } else if (user.password === password && user.email === email) {
     const token = await TokenGenerator({ uid: user._id, expires: 1200 });
-    res.send({ token: token });
+    res.send({
+      token: token,
+      userData: {
+        email: user.email,
+        uid: user._id,
+      },
+    });
     return;
   } else {
     res.send("Invalid password or email");
